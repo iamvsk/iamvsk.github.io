@@ -33,6 +33,64 @@
 	<!-- Favicon Image -->
       <link rel='shortcut icon' href='img/about/muscleL.ico' type='image/x-icon'>
 
+     <!-- script  -->
+     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script>
+      $(document).on('click', '.panel-heading span.clickable', function (e) {
+    var $this = $(this);
+    if (!$this.hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideUp();
+        $this.addClass('panel-collapsed');
+        $this.find('i').removeClass('fa-minus').addClass('fa-plus');
+    } else {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $this.removeClass('panel-collapsed');
+        $this.find('i').removeClass('fa-plus').addClass('fa-minus');
+    }
+});
+$(document).on('click', '.panel div.clickable', function (e) {
+    var $this = $(this);
+    if (!$this.hasClass('panel-collapsed')) {
+        $this.parents('.panel').find('.panel-body').slideUp();
+        $this.addClass('panel-collapsed');
+        $this.find('i').removeClass('fa-minus').addClass('fa-plus');
+    } else {
+        $this.parents('.panel').find('.panel-body').slideDown();
+        $this.removeClass('panel-collapsed');
+        $this.find('i').removeClass('fa-plus').addClass('fa-minus');
+    }
+});
+$(document).ready(function () {
+    $('.panel-heading span.clickable').click();
+    $('.panel div.clickable').click();
+});
+    </script>
+    
+   <!-- <link href="style.css" rel="stylesheet"> -->
+   <style type="text/css">
+     .clickable
+{
+    cursor: pointer;
+}
+
+.clickable .fa
+{
+    background: rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px
+}
+
+.panel-heading span
+{
+    margin-top: -23px;
+    font-size: 15px;
+    margin-right: -9px;
+}
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none; }
+   </style>
+
 </head>
 
 <body id="page-top" class="index">
@@ -360,7 +418,7 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/me.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/about/me.JPG" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -511,120 +569,141 @@
 	 your diet can help you to reach and maintain a healthy weight, 
 	 reduce your risk of chronic diseases (like heart disease and cancer), and promote your overall health.</p>
 <p> <strong>Click On below <a>Diet Tips</a> to know more...</strong></p>
-                              
-  <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Diet Tip #1</a>
-        </h4>
+
+ <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-primary">
+               <div class="panel-heading clickable">
+                     <h3 class="panel-title">Diet Tip #1</h3>
+                       <span class="pull-right"><i class="fa fa-minus"></i></span>
+               </div>
+           <div class="panel-body"> <strong>Drink plenty of water or other calorie-free beverages.</strong> <br> Before you tear into that bag of potato chips, drink a glass of water first. People sometimes confuse thirst with hunger, so you can end up eating extra calories when an ice-cold glass of water is really all you needed. If plain water doesn't cut it, try drinking flavored sparkling water or brewing a cup of fruit-infused herbal tea.</div>
+           </div>
       </div>
-      <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Drink plenty of water or other calorie-free beverages.</strong> <br> Before you tear into that bag of potato chips, drink a glass of water first. People sometimes confuse thirst with hunger, so you can end up eating extra calories when an ice-cold glass of water is really all you needed. If plain water doesn't cut it, try drinking flavored sparkling water or brewing a cup of fruit-infused herbal tea.</div>
+                                <div class="col-md-6">
+                                 <div class="panel panel-success">
+                                 <div class="panel-heading clickable">
+                                 <h3 class="panel-title">Diet Tip #2</h3>
+                                 <span class="pull-right "><i class="fa fa-minus"></i></span>
+                                 </div>
+                                <div class="panel-body">
+                            <strong>Eat several mini-meals during the day.</strong> <br> If you eat fewer calories than you burn, you'll lose weight. But when you're hungry all the time, eating fewer calories can be a challenge. "Studies show people who eat 4-5 meals or snacks per day are better able to control their appetite and weight," says obesity researcher Rebecca Reeves, DrPH, RD. She recommends dividing your daily calories into smaller meals or snacks and enjoying most of them earlier in the day -- dinner should be the last time you eat.
+                                </div>
+           </div>
       </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Diet Tip #2</a>
-        </h4>
+</div>
+
+
+
+
+
+ <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-info">
+               <div class="panel-heading clickable">
+                     <h3 class="panel-title">Diet Tip #3</h3>
+                       <span class="pull-right"><i class="fa fa-minus"></i></span>
+               </div>
+           <div class="panel-body"> <strong>Eat protein at every meal.</strong> <br> Protein is the ultimate fill-me-up food -- it's more satisfying than carbs or fats and keeps you feeling full for longer. It also helps preserve muscle mass and encourages fat burning. So be sure to incorporate healthy proteins like seafood, lean meat, egg whites, yogurt, cheese, soy, nuts, or beans into your meals and snacks.</div>
+           </div>
       </div>
-      <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Eat several mini-meals during the day.</strong> <br> If you eat fewer calories than you burn, you'll lose weight. But when you're hungry all the time, eating fewer calories can be a challenge. "Studies show people who eat 4-5 meals or snacks per day are better able to control their appetite and weight," says obesity researcher Rebecca Reeves, DrPH, RD. She recommends dividing your daily calories into smaller meals or snacks and enjoying most of them earlier in the day -- dinner should be the last time you eat.</div>
+                                <div class="col-md-6">
+                                 <div class="panel panel-warning">
+                                 <div class="panel-heading clickable">
+                                 <h3 class="panel-title">Diet Tip #4</h3>
+                                 <span class="pull-right "><i class="fa fa-minus"></i></span>
+                                 </div>
+                                <div class="panel-body">
+                             <strong>Stock your kitchen with healthy, convenient foods.</strong> <br> Having ready-to-eat snacks and meals-in-minutes on hand sets you up for success. You'll be less likely to hit the drive-through or order a pizza if you can throw together a healthy meal in five or 10 minutes. Here are some essentials to keep on hand: frozen vegetables, whole-grain pasta, reduced-fat cheese, canned tomatoes, canned beans, pre-cooked grilled chicken breast, whole grain tortillas or pitas, and bags of salad greens.
+                                </div>
+           </div>
       </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Diet Tip #3</a>
-        </h4>
+</div>
+
+
+ <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-primary">
+               <div class="panel-heading clickable">
+                     <h3 class="panel-title">Diet Tip #5</h3>
+                       <span class="pull-right"><i class="fa fa-minus"></i></span>
+               </div>
+           <div class="panel-body">  <strong>Always eat breakfast.</strong> <br> It seems like an easy diet win: Skip breakfast and you'll lose weight. Yet many studies show the opposite can be true. Not eating breakfast can make you hungry later, leading to too much nibbling and binge eating at lunch and dinner. To lose weight -- and keep it off -- always make time for a healthy morning meal, like high-fiber cereal, low-fat milk, and fruit.</div>
+           </div>
       </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Eat protein at every meal.</strong> <br> Protein is the ultimate fill-me-up food -- it's more satisfying than carbs or fats and keeps you feeling full for longer. It also helps preserve muscle mass and encourages fat burning. So be sure to incorporate healthy proteins like seafood, lean meat, egg whites, yogurt, cheese, soy, nuts, or beans into your meals and snacks.</div>
+                                <div class="col-md-6">
+                                 <div class="panel panel-success">
+                                 <div class="panel-heading clickable">
+                                 <h3 class="panel-title">Diet Tip #6</h3>
+                                 <span class="pull-right "><i class="fa fa-minus"></i></span>
+                                 </div>
+                                <div class="panel-body">
+                              <strong>Include fiber in your diet.</strong> <br> Fiber aids digestion, prevents constipation, and lowers cholesterol -- and can help with weight loss. Most Americans get only half the fiber they need. To reap fiber's benefits, most women should get about 25 grams daily, while men need about 38 grams -- or 14 grams per 1,000 calories. Good fiber sources include oatmeal, beans, whole grain foods, nuts, and most fruits and vegetables.
+                                </div>
+           </div>
       </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Diet Tip #4</a>
-        </h4>
+</div>
+
+
+ <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-info">
+               <div class="panel-heading clickable">
+                     <h3 class="panel-title">Diet Tip #7</h3>
+                       <span class="pull-right"><i class="fa fa-minus"></i></span>
+               </div>
+           <div class="panel-body"><strong>Weigh yourself once a week.</strong> <br>  People who weigh themselves regularly tend to have more weight loss success. But most experts suggest weighing yourself only once a week, so you're not derailed by daily fluctuations. When you weigh yourself, follow these tips: Weigh yourself at the same time of day, on the same day of the week, on the same scale, and in the same clothes.</div>
+           </div>
       </div>
-      <div id="collapse4" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Stock your kitchen with healthy, convenient foods.</strong> <br> Having ready-to-eat snacks and meals-in-minutes on hand sets you up for success. You'll be less likely to hit the drive-through or order a pizza if you can throw together a healthy meal in five or 10 minutes. Here are some essentials to keep on hand: frozen vegetables, whole-grain pasta, reduced-fat cheese, canned tomatoes, canned beans, pre-cooked grilled chicken breast, whole grain tortillas or pitas, and bags of salad greens.</div>
+                                <div class="col-md-6">
+                                 <div class="panel panel-warning">
+                                 <div class="panel-heading clickable">
+                                 <h3 class="panel-title">Diet Tip #8</h3>
+                                 <span class="pull-right "><i class="fa fa-minus"></i></span>
+                                 </div>
+                                <div class="panel-body">
+                              <strong>Understand portion sizes.</strong> <br> We're so used to super-sizing when we eat out that it's easy to carry that mind-set home. To right-size your diet, use a kitchen scale and measuring cups to measure your meals for a week or two. Use smaller plates and glasses to downsize your portions. Split restaurant servings in half -- making two meals out of one big one. Portion out snack servings instead of eating them directly from the container.
+                                </div>
+           </div>
       </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Diet Tip #5</a>
-        </h4>
+</div>
+
+
+ <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-primary">
+               <div class="panel-heading clickable">
+                     <h3 class="panel-title">Diet Tip #9</h3>
+                       <span class="pull-right"><i class="fa fa-minus"></i></span>
+               </div>
+           <div class="panel-body"> <strong>Eat more fruits and vegetables.</strong> <br> The best "diet" is one where you get to eat more food, not less. If you eat more fruits and vegetables, you shouldn't feel as hungry because these nutrient-rich foods are also high in fiber and water, which can give you a feeling of fullness. Snacking can be a good thing as long as you choose smart snacks.</div>
+           </div>
       </div>
-      <div id="collapse5" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Always eat breakfast.</strong> <br> It seems like an easy diet win: Skip breakfast and you'll lose weight. Yet many studies show the opposite can be true. Not eating breakfast can make you hungry later, leading to too much nibbling and binge eating at lunch and dinner. To lose weight -- and keep it off -- always make time for a healthy morning meal, like high-fiber cereal, low-fat milk, and fruit.</div>
+                                <div class="col-md-6">
+                                 <div class="panel panel-success">
+                                 <div class="panel-heading clickable">
+                                 <h3 class="panel-title">Diet Tip #10</h3>
+                                 <span class="pull-right "><i class="fa fa-minus"></i></span>
+                                 </div>
+                                <div class="panel-body">
+                              <strong>Get help from family and friends.</strong> <br> Getting support can help you reach your weight loss goals. So tell family and friends about your efforts to lead a healthy lifestyle. Maybe they'll join you in exercising, eating right, and losing weight. When you feel like giving up, they'll help you, keep you honest, and cheer you on -- making the whole experience a lot easier.
+                                </div>
+           </div>
       </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Diet Tip #6</a>
-        </h4>
+</div>
+
+
+ <div class="row">
+      <div class="col-md-6">
+          <div class="panel panel-info">
+               <div class="panel-heading clickable">
+                     <h3 class="panel-title">Diet Tip #11</h3>
+                       <span class="pull-right"><i class="fa fa-minus"></i></span>
+               </div>
+           <div class="panel-body"> <strong>Limit alcohol to weekends.</strong> <br> Alcohol contains empty calories: a five-ounce glass of wine has 125, a bottle of beer about 153. Because our bodies don't require those calories, they can get converted into fat. If you enjoy an occasional drink, consider a compromise. Enjoy your favorite alcoholic beverage on weekends only, with just one drink for women per day, two for men.</div>
+           </div>
       </div>
-      <div id="collapse6" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Include fiber in your diet.</strong> <br> Fiber aids digestion, prevents constipation, and lowers cholesterol -- and can help with weight loss. Most Americans get only half the fiber they need. To reap fiber's benefits, most women should get about 25 grams daily, while men need about 38 grams -- or 14 grams per 1,000 calories. Good fiber sources include oatmeal, beans, whole grain foods, nuts, and most fruits and vegetables.</div>
-      </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Diet Tip #7</a>
-        </h4>
-      </div>
-      <div id="collapse7" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Weigh yourself once a week.</strong> <br>  People who weigh themselves regularly tend to have more weight loss success. But most experts suggest weighing yourself only once a week, so you're not derailed by daily fluctuations. When you weigh yourself, follow these tips: Weigh yourself at the same time of day, on the same day of the week, on the same scale, and in the same clothes.</div>
-      </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Diet Tip #8</a>
-        </h4>
-      </div>
-      <div id="collapse8" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Understand portion sizes.</strong> <br> We're so used to super-sizing when we eat out that it's easy to carry that mind-set home. To right-size your diet, use a kitchen scale and measuring cups to measure your meals for a week or two. Use smaller plates and glasses to downsize your portions. Split restaurant servings in half -- making two meals out of one big one. Portion out snack servings instead of eating them directly from the container.</div>
-      </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Diet Tip #9</a>
-        </h4>
-      </div>
-      <div id="collapse9" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Eat more fruits and vegetables.</strong> <br> The best "diet" is one where you get to eat more food, not less. If you eat more fruits and vegetables, you shouldn't feel as hungry because these nutrient-rich foods are also high in fiber and water, which can give you a feeling of fullness. Snacking can be a good thing as long as you choose smart snacks.</div>
-      </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Diet Tip #10</a>
-        </h4>
-      </div>
-      <div id="collapse10" class="panel-collapse collapse">
-        <div class="panel-body"> <strong>Get help from family and friends.</strong> <br> Getting support can help you reach your weight loss goals. So tell family and friends about your efforts to lead a healthy lifestyle. Maybe they'll join you in exercising, eating right, and losing weight. When you feel like giving up, they'll help you, keep you honest, and cheer you on -- making the whole experience a lot easier.</div>
-      </div>
-    </div>
-  <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Diet Tip #11</a>
-        </h4>
-      </div>
-      <div id="collapse11" class="panel-collapse collapse">
-        <div class="panel-body"><strong>Limit alcohol to weekends.</strong> <br> Alcohol contains empty calories: a five-ounce glass of wine has 125, a bottle of beer about 153. Because our bodies don't require those calories, they can get converted into fat. If you enjoy an occasional drink, consider a compromise. Enjoy your favorite alcoholic beverage on weekends only, with just one drink for women per day, two for men.</div>
-      </div>
-    </div>
-	</div>
-        <br>  
+</div>
 
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
@@ -709,8 +788,33 @@
                                 <h2>Am I eating right</h2>
                                 <p class="item-intro text-muted">Just weight It...</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/golden-preview.jpg" alt="">
-                                <p></p>
-                                <p>More Info. Coming Soon...</p>
+                                <p>More Info Coming Soon...</p>
+
+                                    <div class="row">
+                                         <div class="col-md-6">
+                                        <div class="panel panel-primary">
+                                         <div class="panel-heading clickable">
+                                          <h3 class="panel-title">
+                                             Panel 1</h3>
+                                    <span class="pull-right"><i class="fa fa-minus"></i></span>
+                                    </div>
+                             <div class="panel-body">
+                                Panel content <a href="http://www.jquery2dotnet.com/2014/01/static-social-button-with-animation.html">Static Social Button With Animation</a></div>
+                            </div>
+                            </div>
+                                <div class="col-md-6">
+                                 <div class="panel panel-success">
+                                 <div class="panel-heading clickable">
+                                 <h3 class="panel-title">
+                                Panel 2</h3>
+                                 <span class="pull-right "><i class="fa fa-minus"></i></span>
+                                 </div>
+                                <div class="panel-body">
+                            Panel content <a href="http://www.jquery2dotnet.com/2013/11/cool-big-social-counter-button-with.html">Cool Big Social Counter Button With Bootstrap</a></div>
+                                </div>
+                                 </div>
+                                  </div>
+
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
                             </div>
                         </div>
